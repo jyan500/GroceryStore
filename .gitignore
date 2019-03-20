@@ -1,0 +1,7 @@
+*.sql
+*.csv
+*.yaml
+*.pem
+*.env
+static/old_css
+unused/
