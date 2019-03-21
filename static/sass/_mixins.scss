@@ -1,0 +1,84 @@
+@import '_breakpoints';
+@mixin mobile-tap($color){
+	-webkit-tap-highlight-color: $color; 
+	-ms-tap-highlight-color:  $color; 
+	-moz-tap-highlight-color:  $color; 	
+}
+
+@mixin transition_visibility($time){
+	$trans : visibility $time linear, opacity $time linear;
+	-moz-transition: $trans;
+	-o-transition: $trans;
+	-webkit-transition: $trans;
+}
+
+@mixin transition_transform($time){
+	-moz-transition:-moz-transform $time linear;
+	-o-transition:-o-transform $time linear;
+	-webkit-transition:-webkit-transform $time linear;
+}
+
+@mixin transition_scale($scale_factor){
+	-webkit-transform: scale($scale_factor);	
+	-moz-transform: scale($scale_factor);
+	-o-transform: scale($scale_factor);
+}
+@mixin transition_scale_X($scale_factor){
+	-webkit-transform: scaleX($scale_factor);	
+	-moz-transform: scaleX($scale_factor);
+	-o-transform: scaleX($scale_factor);
+}
+
+@mixin gradient($color_start, $color_end){
+	background: -webkit-linear-gradient(to bottom, $color_start 0% , $color_end 30%);
+	background: -o-linear-gradient(to bottom, $color_start 0%,  $color_end 30% );
+	background: linear-gradient(to bottom, $color_start 0%, $color_end 30%);
+}
+
+@mixin gradient_image($color_start, $color_end, $image_url){
+	background-image: -webkit-linear-gradient($color_start, $color_end), url($image_url);
+	background-image: -o-linear-gradient($color_start,  $color_end) , url($image_url);
+	background-image: linear-gradient($color_start , $color_end), url($image_url);
+}
+@mixin shadow($color){
+	-webkit-box-shadow: 8px 7px 7px 1px $color;
+	-moz-box-shadow: 8px 7px 7px 1px $color;
+	-o-box-shadow: 8px 7px 1px 1px $color;
+	box-shadow: 8px 7px 7px 1px $color;
+}
+@mixin flex_column() {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin desktop {
+	@media (min-width: #{$breakpoint_width_tablet + 1} ) and (max-width: #{$breakpoint_width_desktop}){
+		@content;	
+	}
+}
+
+@mixin tablet_portrait {
+	@media (min-width: #{$breakpoint_width_mobile}) and (max-width: #{$breakpoint_width_tablet}){
+		@content;	
+	}
+}
+
+@mixin tablet_landscape {
+	@media (min-width: #{$breakpoint_width_mobile}) and (max-width: #{$breakpoint_width_tablet}) and (orientation: landscape){
+		@content;	
+	}
+}
+
+@mixin mobile_landscape {
+	@media (min-width: #{$breakpoint_width_mobile_2}) and (max-width: #{$breakpoint_width_mobile - 1}){
+		@content;
+	}
+}
+
+@mixin mobile_portrait {
+	@media (min-width: #{$breakpoint_width_mobile_3} ) and (max-width: #{$breakpoint_width_mobile_2 - 1}){
+		@content;
+	}		
+}
