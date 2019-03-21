@@ -1,0 +1,11 @@
+@import 'shared';
+header {
+	background-image: url('../assets/hero-image.jpg');
+	height: 100vh;
+	nav {
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
