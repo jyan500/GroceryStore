@@ -45,6 +45,7 @@ header{
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-wrap: wrap;
 		.image {
 			display: flex;
 			align-items: center;
@@ -62,8 +63,83 @@ header{
 		i {
 			font-size: 2.5em;
 		}
+		@include mobile_portrait {
+			i {
+				display: none;
+			}
+		}
+		@include mobile_landscape {
+			i {
+				display: none;
+			}
+		}
+		@include tablet_portrait {
+
+		}
+		@include tablet_landscape {
+
+		}
+
 	}
 }
 .latest {
-	
+	padding-top: 5px;
+	padding-bottom: 10px;
+	min-height: 100vh;	
+	background-color: #F7B459;
+	color: white;
+	text-align: center;
+	h1 {
+		font-size: 3em;
+	}
+	h2 {
+	}
+	.produce-gallery {
+		.cell {
+			margin: 1rem;
+		}
+		img {
+			max-width: 100%;
+			border: 3px solid white;
+		}
+		@include mobile_portrait {
+			.cell {
+				display: block;
+			}
+		}
+		@include mobile_landscape {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			.cell {
+				width: calc(50% - 2rem);
+			}	
+		}
+		@include tablet_portrait {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			.cell {
+				width: calc(50% - 2rem);
+			}	
+		}
+		@include tablet_landscape {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			.cell {
+				width: calc(33.33% - 2rem);
+			}
+
+		}
+		@include desktop {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			.cell {
+				width: calc(33.33% - 2rem);
+			}
+		}
+
+	}
 }
