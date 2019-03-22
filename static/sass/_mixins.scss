@@ -52,7 +52,23 @@
 	justify-content: center;
 	align-items: center;
 }
+@mixin fade_in_obj($object_to_fade, $fade_in_time){
+	$fade_in_var : $object_to_fade $fade_in_time ease-in-out 0s;
+	transition: $fade_in_var;
+	-webkit-transition: $fade_in_var;
+ 	-moz-transition: $fade_in_var;
+ 	-o-transition: $fade_in_var;
+ 	-ms-transition: $fade_in_var;
+}
 
+@mixin fade_out_obj($obj, $fade_out_time){
+	$fade_out_var : $obj $fade_out_time ease-out 0s;
+	transition:  $fade_out_var;
+	-webkit-transition: $fade_out_var;
+	-moz-transition: $fade_out_var;
+	-o-transtiion: $fade_out_var;
+	-ms-transition: $fade_out_var;	
+}
 @mixin desktop {
 	@media (min-width: #{$breakpoint_width_tablet + 1}){
 		@content;	
