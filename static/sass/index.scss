@@ -84,8 +84,7 @@ header{
 }
 
 .latest {
-	padding-top: 5px;
-	padding-bottom: 10px;
+	padding: 10px;
 	min-height: 100vh;	
 	background-color: $dark-yellow;
 	color: white;
@@ -169,6 +168,7 @@ header{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	padding-top: 20px;	
 	h1 {
 		text-align: center;
 		font-size: 3em;
@@ -188,7 +188,62 @@ header{
 		}
 	}
 	.description {
-		text-align: center;
-		font-weight: 600;
+		display: flex;
+		justify-content: center;
+		p {
+			width: 50%;
+			text-align: center;
+			font-size: 1.4em;
+			font-weight: 600;
+			@include tablet_portrait {
+				width: 75%;
+				margin-left: 20px;
+				padding-right: 20px;
+			}
+			@include mobile_portrait {
+				width: 100%;
+				margin-left: 20px;
+				padding-right: 20px;
+			}
+			@include mobile_landscape {
+				width: 100%;
+				margin-left: 20px;
+				padding-right: 20px;
+			}
+		}
+		padding-bottom: 20px;
+	}
+}
+
+footer {
+	min-height: 30vh;
+	background-color: $dark-grey;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	.social-media{
+		ul {
+			padding: 0;
+			list-style: none;
+			li {
+				padding-top: 10px;
+				display: inline-block;
+				a {
+					font-size: 2em;
+					color: $dark-yellow;
+					padding-right: 20px;
+					padding-left: 20px;
+				}
+			}
+		}
+	}
+	.location {
+		padding: 20px;
+		p {
+			text-align: center;
+			color: white;
+		}
 	}
 }
