@@ -46,6 +46,7 @@ header h1 {
 }
 
 .order {
+  padding: 10px;
   min-height: 50vh;
 }
 .order h1 {
@@ -126,7 +127,7 @@ header h1 {
 }
 .latest .produce-gallery img {
   max-width: 100%;
-  border: 3px solid white;
+  border: 5px solid white;
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .latest .produce-gallery .cell {

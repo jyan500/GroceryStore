@@ -36,6 +36,7 @@ header{
 	}
 }
 .order {
+	padding: 10px;
 	min-height: 50vh;	
 	h1 {
 		text-align: center;
@@ -118,7 +119,7 @@ header{
 		}
 		img {
 			max-width: 100%;
-			border: 3px solid white;
+			border: 5px solid white;
 		}
 		@include mobile_portrait {
 			.cell {
